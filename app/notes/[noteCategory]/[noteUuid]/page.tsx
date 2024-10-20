@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+
 import getNote from '@/libs/notes/data-access-note/getNote'
 
 interface Props {

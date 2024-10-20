@@ -1,4 +1,5 @@
 import fs from 'fs'
+
 import { BASE_DIRECTORY } from '@/libs/notes/constants'
 import { DirectoryCategoryEnum } from '@/libs/notes/types'
 import { isValidCategory } from '@/libs/notes/utils'

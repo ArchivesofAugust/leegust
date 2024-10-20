@@ -1,6 +1,8 @@
 import fs from 'fs'
 import path from 'path'
+
 import matter from 'gray-matter'
+
 import { DirectoryCategoryEnum, Note } from '@/libs/notes/types'
 
 export const isValidCategory = (category?: string): category is DirectoryCategoryEnum => {

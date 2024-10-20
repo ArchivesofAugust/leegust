@@ -1,6 +1,8 @@
 import '@/libs/shared/styles/globals.scss'
 import type { Metadata } from 'next'
+
 import localFont from 'next/font/local'
+
 import Providers from '@/libs/shared/components/provider/Providers'
 
 const pretendard = localFont({

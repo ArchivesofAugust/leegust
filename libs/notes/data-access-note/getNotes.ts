@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+
 import { BASE_DIRECTORY } from '@/libs/notes/constants'
 import { Note } from '@/libs/notes/types'
 import { getCategoryOrDefault, isValidCategory, processMarkdownFile } from '@/libs/notes/utils'
