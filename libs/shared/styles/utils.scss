@@ -1,0 +1,25 @@
+@import './variables/colors';
+@import './variables/vars';
+@import './mixins/typography';
+
+@mixin tablet {
+  @media (min-width: $device-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $device-desktop) {
+    @content;
+  }
+}
+
+@mixin getFullScreenHeight {
+  height: 100vh; /* fallback */
+  height: min(calc(var(--vh, 1vh) * 100), 100vh);
+}
+
+@mixin getMinFullScreenHeight {
+  min-height: 100vh; /* fallback */
+  min-height: min(calc(var(--vh, 1vh) * 100), 100vh);
+}

@@ -1,0 +1,165 @@
+@mixin glyphBase($size, $weight, $line-height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin glyph12Regular {
+  @include glyphBase($size: 12px, $weight: 400, $line-height: 20px);
+}
+
+@mixin glyph12Medium {
+  @include glyphBase($size: 12px, $weight: 500, $line-height: 20px);
+}
+
+@mixin glyph12SemiBold {
+  @include glyphBase($size: 12px, $weight: 600, $line-height: 20px);
+}
+
+@mixin glyph12SemiBold {
+  @include glyphBase($size: 12px, $weight: 700, $line-height: 20px);
+}
+
+@mixin glyph12Bold {
+  @include glyphBase($size: 12px, $weight: 800, $line-height: 20px);
+}
+
+@mixin glyph13Regular {
+  @include glyphBase($size: 13px, $weight: 400, $line-height: 21px);
+}
+
+@mixin glyph13Medium {
+  @include glyphBase($size: 13px, $weight: 500, $line-height: 21px);
+}
+
+@mixin glyph13SemiBold {
+  @include glyphBase($size: 13px, $weight: 600, $line-height: 21px);
+}
+
+@mixin glyph14Regular {
+  @include glyphBase($size: 14px, $weight: 400, $line-height: 22px);
+}
+
+@mixin glyph14Medium {
+  @include glyphBase($size: 14px, $weight: 500, $line-height: 22px);
+}
+
+@mixin glyph14SemiBold {
+  @include glyphBase($size: 14px, $weight: 600, $line-height: 22px);
+}
+
+@mixin glyph15Regular {
+  @include glyphBase($size: 15px, $weight: 400, $line-height: 23px);
+}
+
+@mixin glyph15Medium {
+  @include glyphBase($size: 15px, $weight: 500, $line-height: 23px);
+}
+
+@mixin glyph15SemiBold {
+  @include glyphBase($size: 15px, $weight: 600, $line-height: 23px);
+}
+
+@mixin glyph16Regular {
+  @include glyphBase($size: 16px, $weight: 400, $line-height: 24px);
+}
+
+@mixin glyph16Medium {
+  @include glyphBase($size: 16px, $weight: 500, $line-height: 24px);
+}
+
+@mixin glyph16SemiBold {
+  @include glyphBase($size: 16px, $weight: 600, $line-height: 24px);
+}
+
+@mixin glyph16Bold {
+  @include glyphBase($size: 16px, $weight: 700, $line-height: 24px);
+}
+
+@mixin glyph17Medium {
+  @include glyphBase($size: 17px, $weight: 500, $line-height: 25px);
+}
+
+@mixin glyph17SemiBold {
+  @include glyphBase($size: 17px, $weight: 600, $line-height: 25px);
+}
+
+@mixin glyph18Regular {
+  @include glyphBase($size: 18px, $weight: 400, $line-height: 26px);
+}
+
+@mixin glyph18Medium {
+  @include glyphBase($size: 18px, $weight: 500, $line-height: 26px);
+}
+
+@mixin glyph18SemiBold {
+  @include glyphBase($size: 18px, $weight: 600, $line-height: 26px);
+}
+
+@mixin glyph18Bold {
+  @include glyphBase($size: 18px, $weight: 700, $line-height: 26px);
+}
+
+@mixin glyph20Medium {
+  @include glyphBase($size: 20px, $weight: 500, $line-height: 28px);
+}
+
+@mixin glyph20SemiBold {
+  @include glyphBase($size: 20px, $weight: 600, $line-height: 28px);
+}
+
+@mixin glyph20Bold {
+  @include glyphBase($size: 20px, $weight: 700, $line-height: 28px);
+}
+
+@mixin glyph22Medium {
+  @include glyphBase($size: 22px, $weight: 500, $line-height: 30px);
+}
+
+@mixin glyph24Regular {
+  @include glyphBase($size: 24px, $weight: 400, $line-height: 34px);
+}
+
+@mixin glyph24Medium {
+  @include glyphBase($size: 24px, $weight: 500, $line-height: 34px);
+}
+
+@mixin glyph24SemiBold {
+  @include glyphBase($size: 24px, $weight: 600, $line-height: 34px);
+}
+
+@mixin glyph24Bold {
+  @include glyphBase($size: 24px, $weight: 700, $line-height: 34px);
+}
+
+@mixin glyph28SemiBold {
+  @include glyphBase($size: 28px, $weight: 600, $line-height: 38px);
+}
+
+@mixin glyph28Bold {
+  @include glyphBase($size: 28px, $weight: 700, $line-height: 38px);
+}
+
+@mixin glyph32SemiBold {
+  @include glyphBase($size: 32px, $weight: 600, $line-height: 42px);
+}
+
+@mixin glyph32Bold {
+  @include glyphBase($size: 32px, $weight: 700, $line-height: 42px);
+}
+
+@mixin glyph32ExtraBold {
+  @include glyphBase($size: 32px, $weight: 800, $line-height: 42px);
+}
+
+@mixin glyph40Bold {
+  @include glyphBase($size: 40px, $weight: 700, $line-height: 50px);
+}
+
+@mixin glyph48SemiBold {
+  @include glyphBase($size: 48px, $weight: 600, $line-height: 58px);
+}
+
+@mixin glyph48Bold {
+  @include glyphBase($size: 48px, $weight: 700, $line-height: 58px);
+}
