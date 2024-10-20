@@ -5,19 +5,22 @@ import createDOMPurify from 'dompurify'
 import matter from 'gray-matter'
 import { JSDOM } from 'jsdom'
 
-import { ALLOWED_EXTENSIONS, NOTES_DIRECTORY } from '@/libs/notes/constants'
+import {
+  ALLOWED_EXTENSIONS,
+  NOTES_DIRECTORY,
+  TAG_LIST_NEEDING_CUSTOM_CLASS,
+} from '@/libs/notes/constants'
 import { DirectoryCategoryEnum, Note } from '@/libs/notes/types'
 
-export const isValidCategory = (category?: string): category is DirectoryCategoryEnum => {
-  return (
-    !!category && Object.values(DirectoryCategoryEnum).includes(category as DirectoryCategoryEnum)
-  )
-}
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const getImagePath = (src: string) =>
+  src.startsWith('http') ? src : path.join(`/${NOTES_DIRECTORY}`, src)
+
+export const isValidCategory = (category?: string): category is DirectoryCategoryEnum =>
+  !!category && Object.values(DirectoryCategoryEnum).some((value) => value === category)
 
 export const getCategoryOrDefault = (category?: string): DirectoryCategoryEnum => {
-  return isValidCategory(category)
-    ? (category as DirectoryCategoryEnum)
-    : DirectoryCategoryEnum.Uncategorized
+  return isValidCategory(category) ? category : DirectoryCategoryEnum.Uncategorized
 }
 
 export const processMarkdownFile = (filePath: string, category: DirectoryCategoryEnum): Note => {
@@ -30,10 +33,6 @@ export const processMarkdownFile = (filePath: string, category: DirectoryCategor
     ...(matterResult.data as { date: string; title: string }),
   }
 }
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const getImagePath = (src: string) =>
-  src.startsWith('http') ? src : path.join(`/${NOTES_DIRECTORY}`, src)
 
 const isValidImage = (imageSrc: string) => {
   const extension = imageSrc.split('.').pop()?.toLowerCase()
@@ -53,9 +52,17 @@ const adjustImagePaths = (htmlContent: string, basePath: string): string => {
   )
 }
 
-export const sanitizeHtml = (html: string, basePath: string): string => {
-  const adjustedHtml = adjustImagePaths(html, basePath)
+const addClassesToNoteElement = (node: Element) => {
+  const tagName = node.nodeName.toLowerCase()
+  if (TAG_LIST_NEEDING_CUSTOM_CLASS.includes(tagName)) {
+    node.classList.add('notes', `note-${tagName}`)
+  }
+}
+
+export const sanitizeHtml = (html: string, imageBasePath: string): string => {
+  const adjustedHtml = adjustImagePaths(html, imageBasePath)
   const window = new JSDOM('').window
   const DOMPurify = createDOMPurify(window as unknown as Window)
-  return DOMPurify.sanitize(adjustedHtml)
+  DOMPurify.addHook('afterSanitizeAttributes', (node) => addClassesToNoteElement(node))
+  return DOMPurify.sanitize(adjustedHtml, { ADD_ATTR: ['class'] })
 }

@@ -11,3 +11,23 @@ export const ALLOWED_EXTENSIONS = [
   'gif',
   'svg',
 ]
+
+export const TAG_LIST_NEEDING_CUSTOM_CLASS = [
+  'p',
+  'h1',
+  'h2',
+  'h3',
+  'a',
+  'ul',
+  'ol',
+  'li',
+  'hr',
+  'blockquote',
+  'pre',
+  'code',
+  'img',
+  'table',
+  'tr',
+  'td',
+  'th',
+]
