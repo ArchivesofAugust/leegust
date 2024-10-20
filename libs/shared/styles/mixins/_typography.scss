@@ -16,11 +16,11 @@
   @include glyphBase($size: 12px, $weight: 600, $line-height: 20px);
 }
 
-@mixin glyph12SemiBold {
+@mixin glyph12Bold {
   @include glyphBase($size: 12px, $weight: 700, $line-height: 20px);
 }
 
-@mixin glyph12Bold {
+@mixin glyph12ExtraBold {
   @include glyphBase($size: 12px, $weight: 800, $line-height: 20px);
 }
 

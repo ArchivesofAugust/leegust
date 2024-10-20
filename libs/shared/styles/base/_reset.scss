@@ -2,6 +2,7 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 abbr,
 blockquote,
 body,
@@ -29,6 +30,7 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 address,
 caption,
 code,
@@ -39,52 +41,66 @@ th {
   font-weight: 400;
   font-style: normal;
 }
+
 fieldset,
 iframe {
   border: 0;
 }
+
 caption,
 th {
   text-align: left;
 }
+
 table {
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
+
 details,
 main,
 summary {
   display: block;
 }
+
 audio,
 canvas,
 progress,
 video {
   vertical-align: initial;
 }
+
 button {
-  background: none;
-  border: 0;
-  box-sizing: initial;
-  color: inherit;
   cursor: pointer;
+
+  overflow: visible;
+
+  box-sizing: initial;
+
   font: inherit;
   line-height: inherit;
-  overflow: visible;
+  color: inherit;
   vertical-align: inherit;
+
+  background: none;
+  border: 0;
 }
+
 button:disabled {
   cursor: default;
 }
+
 :focus {
-  outline: 4px solid rgba(0, 125, 250, 0.6);
+  outline: 4px solid rgb(0 125 250 / 60%);
   outline-offset: 1px;
 }
-:focus[data-focus-method='mouse']:not(input):not(textarea):not(select),
-:focus[data-focus-method='touch']:not(input):not(textarea):not(select) {
+
+:focus[data-focus-method='mouse']:not(input, textarea, select),
+:focus[data-focus-method='touch']:not(input, textarea, select) {
   outline: none;
 }
+
 ::-moz-focus-inner {
-  border: 0;
   padding: 0;
+  border: 0;
 }

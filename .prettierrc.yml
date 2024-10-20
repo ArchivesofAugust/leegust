@@ -7,3 +7,10 @@ printWidth: 100
 plugins:
   - prettier-plugin-multiline-arrays
 multilineArraysWrapThreshold: 2
+overrides:
+  - files: '*.scss'
+    options:
+      singleQuote: true
+      trailingComma: 'none'
+      printWidth: 80
+      parser: 'scss'

@@ -15,5 +15,11 @@
     "javascriptreact",
     "typescript",
     "typescriptreact"
-  ]
+  ],
+  "stylelint.validate": ["css", "scss"],
+  "stylelint.configFile": ".stylelintrc.json",
+  "stylelint.packageManager": "pnpm",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "always"
+  }
 }
