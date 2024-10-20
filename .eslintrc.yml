@@ -63,13 +63,16 @@ rules:
         - pattern: '@libs/shared/**'
           group: internal
           position: after
-        - pattern: '@libs/shared/components/**'
+        - pattern: '@libs/shared/types/**'
+          group: internal
+          position: after
+        - pattern: '@libs/shared/functions/**'
           group: internal
           position: after
         - pattern: '@libs/shared/hooks/**'
           group: internal
           position: after
-        - pattern: '@libs/shared/types/**'
+        - pattern: '@libs/shared/components/**'
           group: internal
           position: after
         - pattern: '@libs/**'
