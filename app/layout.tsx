@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   description: 'leegust: archives of august',
 }
 
-export default function RootLayout({
+export default function layout({
   children,
 }: Readonly<{
   children: React.ReactNode
