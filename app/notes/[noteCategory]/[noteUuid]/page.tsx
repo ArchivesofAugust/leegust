@@ -27,7 +27,9 @@ const page = async ({ params }: Props) => {
   const sanitizedHtml = sanitizeHtml(note.contentHtml, imageBasePath)
   return (
     <div className={cx('container')}>
-      <div dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+      <div className={cx('wrapper')}>
+        <div className={cx('contents')} dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
+      </div>
     </div>
   )
 }
