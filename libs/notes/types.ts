@@ -24,3 +24,10 @@ export interface MatterResult {
   date: string
   title: string
 }
+
+export interface NoteNavigation {
+  hasPrevious: boolean
+  hasNext: boolean
+  previousUuid?: string
+  nextUuid?: string
+}

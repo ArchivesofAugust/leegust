@@ -11,7 +11,14 @@ import {
   TAG_LIST_NEEDING_CUSTOM_CLASS,
   TOC_TAGS,
 } from '@/libs/notes/constants'
-import { DirectoryCategoryEnum, HeadingTag, MatterResult, Note, TocItem } from '@/libs/notes/types'
+import {
+  DirectoryCategoryEnum,
+  HeadingTag,
+  MatterResult,
+  Note,
+  NoteNavigation,
+  TocItem,
+} from '@/libs/notes/types'
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const getImagePath = (src: string) =>
@@ -102,5 +109,22 @@ export const moveToTocItem = (elementId: string) => {
   const element = document.getElementById(elementId)
   if (element) {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
+
+export const getNoteNavigation = (notes: Note[], currentUuid: string): NoteNavigation => {
+  const currentIndex = notes.findIndex((note) => note.uuid === currentUuid)
+  if (currentIndex === -1) {
+    return { hasPrevious: false, hasNext: false }
+  }
+
+  const hasPrevious = currentIndex > 0
+  const hasNext = currentIndex < notes.length - 1
+
+  return {
+    hasPrevious,
+    hasNext,
+    previousUuid: hasPrevious ? notes[currentIndex - 1].uuid : undefined,
+    nextUuid: hasNext ? notes[currentIndex + 1].uuid : undefined,
   }
 }
