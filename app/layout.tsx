@@ -1,9 +1,10 @@
 import '@/libs/shared/styles/globals.scss'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
 import localFont from 'next/font/local'
 
 import Providers from '@/libs/shared/components/provider/Providers'
+import { META_DESCRIPTION, META_TITLE, META_URL } from '@/libs/shared/constants/meta'
 
 const pretendard = localFont({
   src: [
@@ -57,8 +58,20 @@ const pretendard = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'leegust',
-  description: 'leegust: archives of august',
+  metadataBase: new URL(META_URL),
+  title: META_TITLE,
+  description: META_DESCRIPTION,
+  openGraph: {
+    title: META_TITLE,
+    description: META_DESCRIPTION,
+    url: META_URL,
+    siteName: META_TITLE,
+  },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
 }
 
 export default function layout({

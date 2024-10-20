@@ -1,6 +1,14 @@
+import { Metadata } from 'next'
+
 import { notFound } from 'next/navigation'
 
 import getNotes from '@/libs/notes/data-access-note/getNotes'
+import { META_DESCRIPTION } from '@/libs/shared/constants/meta'
+
+export const metadata: Metadata = {
+  title: 'leegust | notes',
+  description: META_DESCRIPTION,
+}
 
 interface Props {
   params: { noteCategory?: string }
