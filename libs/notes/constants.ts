@@ -1,5 +1,7 @@
 import path from 'path'
 
+import { HeadingTag } from '@/libs/notes/types'
+
 export const NOTES_DIRECTORY = 'notes'
 
 export const BASE_DIRECTORY = path.join(process.cwd(), NOTES_DIRECTORY)
@@ -30,4 +32,10 @@ export const TAG_LIST_NEEDING_CUSTOM_CLASS = [
   'tr',
   'td',
   'th',
+]
+
+export const TOC_TAGS: HeadingTag[] = [
+  'h1',
+  'h2',
+  'h3',
 ]

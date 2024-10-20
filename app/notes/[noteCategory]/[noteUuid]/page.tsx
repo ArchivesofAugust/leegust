@@ -4,7 +4,7 @@ import classNames from 'classnames/bind'
 
 import { NOTES_DIRECTORY } from '@/libs/notes/constants'
 import getNote from '@/libs/notes/data-access-note/getNote'
-import { sanitizeHtml } from '@/libs/notes/utils'
+import { categorizeTocItems, sanitizeHtml } from '@/libs/notes/utils'
 
 import styles from './page.module.scss'
 
@@ -23,8 +23,11 @@ const page = async ({ params }: Props) => {
   if (!note || !note.contentHtml) {
     notFound()
   }
+
   const imageBasePath = `/${NOTES_DIRECTORY}/${noteCategory}`
-  const sanitizedHtml = sanitizeHtml(note.contentHtml, imageBasePath)
+  const { sanitizedHtml, tocItems } = sanitizeHtml(note.contentHtml, imageBasePath)
+
+  console.log(categorizeTocItems(tocItems))
   return (
     <div className={cx('container')}>
       <div className={cx('wrapper')}>

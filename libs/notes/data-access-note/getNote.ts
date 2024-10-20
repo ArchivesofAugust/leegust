@@ -6,7 +6,7 @@ import { remark } from 'remark'
 import html from 'remark-html'
 
 import { BASE_DIRECTORY } from '@/libs/notes/constants'
-import { Note } from '@/libs/notes/types'
+import { MatterResult, Note } from '@/libs/notes/types'
 import { getCategoryOrDefault } from '@/libs/notes/utils'
 
 const getNote = async (uuid: string, category?: string): Promise<Note | null> => {
@@ -27,7 +27,7 @@ const getNote = async (uuid: string, category?: string): Promise<Note | null> =>
       uuid,
       category: getCategoryOrDefault(category),
       contentHtml,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as MatterResult),
     }
   } catch (error) {
     console.error(`Error processing ${uuid} note:`, error)
