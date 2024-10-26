@@ -13,6 +13,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.7",
     "classnames": "^2.5.1",
     "date-fns": "^4.1.0",
     "dompurify": "^3.1.7",

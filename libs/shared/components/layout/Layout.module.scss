@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: initial;
+
+  width: 100%;
+
+  background-color: $lightgray-7;
+
+  @include getMinFullScreenHeight;
+}
+
+.contents {
+  width: 90%;
+  max-width: 560px;
+  margin: 0 auto;
+  padding-top: 120px;
+
+  text-align: left;
+
+  @include desktop {
+    padding-top: 160px;
+  }
+}
+
+.title {
+  @include glyph16Regular;
+
+  margin-bottom: 12px;
+  color: $black-10;
+
+  @include desktop {
+    @include glyph18Regular;
+
+    margin-bottom: 16px;
+  }
+}
+
+.footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 40px 0;
+
+  @include desktop {
+    padding: 80px 0;
+  }
+}

@@ -7,7 +7,8 @@
     "property-no-vendor-prefix": null,
     "scss/at-mixin-pattern": null,
     "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true
+    "scss/at-rule-no-unknown": true,
+    "selector-class-pattern": null
   },
   "ignoreFiles": [
     "**/*.js",

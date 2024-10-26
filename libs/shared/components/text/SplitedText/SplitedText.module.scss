@@ -1,0 +1,30 @@
+.container {
+  user-select: none;
+  width: 100%;
+  white-space: pre-line;
+}
+
+.line {
+  display: inline;
+
+  @include desktop {
+    display: block;
+  }
+}
+
+.char {
+  display: inline-block;
+  transition: color 0.1s ease;
+
+  &:not(.isSpace):hover {
+    color: $darkgray;
+  }
+}
+
+.mobileSpace {
+  display: inline;
+
+  @include desktop {
+    display: none;
+  }
+}

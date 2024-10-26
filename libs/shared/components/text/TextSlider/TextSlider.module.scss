@@ -1,0 +1,31 @@
+.wrapper {
+  user-select: none;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.textContainer {
+  position: relative;
+  width: 100%;
+
+  &:hover {
+    .default {
+      transform: translateY(-100%);
+    }
+
+    .hover {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.item {
+  display: block;
+  transition: transform 0.3s ease;
+
+  &.hover {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
