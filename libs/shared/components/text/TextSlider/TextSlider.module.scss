@@ -6,6 +6,7 @@
 
 .textContainer {
   position: relative;
+  display: inline-block;
   width: 100%;
 
   &:hover {
@@ -28,4 +29,8 @@
     top: 100%;
     left: 0;
   }
+}
+
+.link {
+  color: $link-active-color;
 }

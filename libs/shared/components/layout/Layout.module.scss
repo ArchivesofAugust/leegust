@@ -27,13 +27,11 @@
 .title {
   @include glyph16Regular;
 
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: $black-10;
 
   @include desktop {
     @include glyph18Regular;
-
-    margin-bottom: 16px;
   }
 }
 

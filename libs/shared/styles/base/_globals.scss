@@ -7,7 +7,7 @@ body {
 a {
   user-select: none; // 텍스트 선택 방지
 
-  color: $indigo-accessible-dark;
+  color: $link-color;
   text-decoration: none;
 
   outline: none; // 포커스 아웃라인 제거
@@ -16,11 +16,11 @@ a {
   -webkit-touch-callout: none; // iOS에서 길게 눌렀을 때 메뉴 제거
 
   &:hover {
-    color: $indigo-accessible-light;
+    color: $link-hover-color;
   }
 
   &:active {
-    color: $indigo-accessible-light;
+    color: $link-active-color;
 
     -webkit-tap-highlight-color: transparent;
   }

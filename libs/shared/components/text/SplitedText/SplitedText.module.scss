@@ -16,8 +16,14 @@
   display: inline-block;
   transition: color 0.1s ease;
 
-  &:not(.isSpace):hover {
-    color: $darkgray;
+  &:not(.isSpace) {
+    &:hover {
+      color: $darkgray;
+    }
+
+    &:active {
+      color: $link-active-color;
+    }
   }
 }
 

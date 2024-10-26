@@ -28,20 +28,26 @@ const HomeLayout = () => {
       icon: 'mail',
       href: 'mailto:archivesofaugust@gmail.com',
     },
+    {
+      icon: 'about',
+      href: '/about',
+    },
   ]
 
   return (
     <Layout title={title}>
       <div className={cx('container')}>
-        <p className={cx('row', 'description')}>
-          <SplitedText target={description} />
-        </p>
-        <div className={cx('row', 'links')}>
-          {socials.map((social) => (
-            <Link className={cx('link')} href={social.href} key={social.icon}>
-              <Icon name={social.icon} size={16} weight="bold" />
-            </Link>
-          ))}
+        <div className={cx('header')}>
+          <p className={cx('row', 'description')}>
+            <SplitedText target={description} />
+          </p>
+          <div className={cx('row', 'links')}>
+            {socials.map((social) => (
+              <Link className={cx('link')} href={social.href} key={social.icon}>
+                <Icon name={social.icon} size={18} mobileSize={16} weight="bold" />
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>

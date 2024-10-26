@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, ReactElement } from 'react'
 
 import classNames from 'classnames/bind'
 
@@ -10,18 +10,20 @@ const cx = classNames.bind(styles)
 
 interface Props {
   title: string
+  footer?: ReactElement
+  backHref?: string
 }
 
-const Layout = ({ title, children: contents }: PropsWithChildren<Props>) => {
+const Layout = ({ title, footer, backHref, children: contents }: PropsWithChildren<Props>) => {
   return (
     <div className={cx('container')}>
       <div className={cx('contents')}>
         <p className={cx('title')}>
-          <TextSlider value={title} />
+          <TextSlider value={title} href={backHref} />
         </p>
         {contents}
       </div>
-      <div className={cx('contents', 'footer')}></div>
+      {!!footer && <div className={cx('contents', 'footer')}>{footer}</div>}
     </div>
   )
 }
