@@ -1,6 +1,6 @@
 export enum DirectoryCategoryEnum {
-  Reflections = 'reflections',
-  Studies = 'studies',
+  Work = 'work',
+  Life = 'life',
   Uncategorized = 'uncategorized',
 }
 
