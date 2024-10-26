@@ -21,7 +21,7 @@ const Layout = ({ title, footer, backHref, children: contents }: PropsWithChildr
         <p className={cx('title')}>
           <TextSlider value={title} href={backHref} />
         </p>
-        {contents}
+        <div className={cx('children')}>{contents}</div>
       </div>
       {!!footer && <div className={cx('contents', 'footer')}>{footer}</div>}
     </div>

@@ -13,13 +13,9 @@
 }
 
 .description {
-  @include glyph14Regular;
+  @include glyph16Regular;
 
   color: $black-14;
-
-  @include desktop {
-    @include glyph16Regular;
-  }
 }
 
 .links {

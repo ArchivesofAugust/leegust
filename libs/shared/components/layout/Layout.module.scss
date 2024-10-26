@@ -20,18 +20,18 @@
   text-align: left;
 
   @include desktop {
-    padding: 120px 0;
+    padding: 100px 0;
   }
 }
 
 .title {
-  @include glyph16Regular;
+  @include glyph16Medium;
 
   margin-bottom: 8px;
   color: $black-10;
 
   @include desktop {
-    @include glyph18Regular;
+    @include glyph16Medium;
   }
 }
 

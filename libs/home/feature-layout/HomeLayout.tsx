@@ -44,7 +44,7 @@ const HomeLayout = () => {
           <div className={cx('row', 'links')}>
             {socials.map((social) => (
               <Link className={cx('link')} href={social.href} key={social.icon}>
-                <Icon name={social.icon} size={18} mobileSize={16} weight="bold" />
+                <Icon name={social.icon} size={18} weight="bold" />
               </Link>
             ))}
           </div>

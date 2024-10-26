@@ -9,14 +9,10 @@
 }
 
 .sectionTitle {
-  @include glyph14Regular;
+  @include glyph16Regular;
 
   margin-bottom: 16px;
-  color: $black-12;
-
-  @include desktop {
-    @include glyph16Regular;
-  }
+  color: $black-10;
 }
 
 .sectionItem {
@@ -26,12 +22,8 @@
 }
 
 .itemTitle {
-  @include glyph13Regular;
+  @include glyph15Regular;
 
   margin-bottom: 8px;
   color: $black-14;
-
-  @include desktop {
-    @include glyph14Regular;
-  }
 }
