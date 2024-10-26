@@ -16,7 +16,7 @@ interface Props {
   href?: string
 }
 
-const TextSlider = ({ value, hoverValue = 'yongwoo', href }: Props) => {
+const TextSlider = ({ value, hoverValue = 'Yongwoo', href }: Props) => {
   const defaultRef = useRef<HTMLSpanElement>(null)
   const hoverRef = useRef<HTMLSpanElement>(null)
   const containerRef = useRef<HTMLSpanElement>(null)
