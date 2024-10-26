@@ -11,7 +11,7 @@ import styles from './HomeLayout.module.scss'
 const cx = classNames.bind(styles)
 
 const HomeLayout = () => {
-  const title = 'Archives of August | Lee Gust'
+  const title = 'Archives of August'
   const description =
     "I'm a software engineer in Seoul, South Korea.\nHere, I write about programming, perspectives, and the spaces in between."
 
@@ -35,7 +35,7 @@ const HomeLayout = () => {
   ]
 
   return (
-    <Layout title={title}>
+    <Layout title={title} hoverTitle="leegust">
       <div className={cx('container')}>
         <div className={cx('header')}>
           <p className={cx('row', 'description')}>
@@ -44,7 +44,7 @@ const HomeLayout = () => {
           <div className={cx('row', 'links')}>
             {socials.map((social) => (
               <Link className={cx('link')} href={social.href} key={social.icon}>
-                <Icon name={social.icon} size={18} weight="bold" />
+                <Icon name={social.icon} size={18} weight="duotone" />
               </Link>
             ))}
           </div>

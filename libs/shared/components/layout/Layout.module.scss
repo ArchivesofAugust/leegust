@@ -6,7 +6,7 @@
 
   width: 100%;
 
-  background-color: $lightgray-8;
+  background-color: $background-color;
 
   @include getMinFullScreenHeight;
 }
@@ -28,7 +28,7 @@
   @include glyph16Medium;
 
   margin-bottom: 8px;
-  color: $black-10;
+  color: $header-title-color;
 
   @include desktop {
     @include glyph16Medium;

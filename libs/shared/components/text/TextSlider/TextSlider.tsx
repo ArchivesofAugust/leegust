@@ -6,6 +6,8 @@ import Link from 'next/link'
 
 import classNames from 'classnames/bind'
 
+import Icon from '@/libs/shared/components/Icon/Icon'
+
 import styles from './TextSlider.module.scss'
 
 const cx = classNames.bind(styles)
@@ -14,9 +16,10 @@ interface Props {
   value: string
   hoverValue?: string
   href?: string
+  enableHoverLink?: boolean
 }
 
-const TextSlider = ({ value, hoverValue = 'Yongwoo', href }: Props) => {
+const TextSlider = ({ value, hoverValue = 'Yongwoo', href, enableHoverLink = false }: Props) => {
   const defaultRef = useRef<HTMLSpanElement>(null)
   const hoverRef = useRef<HTMLSpanElement>(null)
   const containerRef = useRef<HTMLSpanElement>(null)
@@ -32,12 +35,17 @@ const TextSlider = ({ value, hoverValue = 'Yongwoo', href }: Props) => {
 
   return (
     <span className={cx('wrapper')}>
+      {href && (
+        <Link href={href} className={cx('back')}>
+          <Icon name="back" size={16} weight="duotone" />
+        </Link>
+      )}
       <span className={cx('textContainer')} ref={containerRef}>
         <span className={cx('item', 'default')} ref={defaultRef}>
           {value}
         </span>
         <span className={cx('item', 'hover')} ref={hoverRef}>
-          {href ? (
+          {href && enableHoverLink ? (
             <Link href={href} className={cx('link')}>
               {hoverValue}
             </Link>

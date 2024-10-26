@@ -18,28 +18,30 @@ const AboutLayout = () => {
       items: [
         {
           title: (
-            <>
+            <div className={cx('linkWrapper')}>
               <Link target="_blank" href="https://www.linkedin.com/company/latticeholdings/people/">
                 Lattice
               </Link>{' '}
-              | November 2023 - Present
-            </>
+              <SplitedText target=" | November 2023 - Present" />
+            </div>
           ),
           items: [
             {
-              content: 'Software Engineer, Web Front-End',
+              content: <SplitedText target="Software Engineer, Web Front-End" />,
               items: [
-                { content: 'TypeScript, React, Next.js' },
-                { content: 'Responsible for core features development' },
+                { content: <SplitedText target="TypeScript, React, Next.js" /> },
+                { content: <SplitedText target="Responsible for core features development" /> },
               ],
             },
           ],
         },
         {
-          title: 'Digital Media Lab, Yonsei University | Summer 2022 (3 months)',
+          title: (
+            <SplitedText target="Digital Media Lab, Yonsei University | Summer 2022 (3 months)" />
+          ),
           items: [
-            { content: 'Qualitative UX Research Intern' },
-            { content: 'Conducted user research and analysis' },
+            { content: <SplitedText target="Qualitative UX Research Intern" /> },
+            { content: <SplitedText target="Conducted user research and analysis" /> },
           ],
         },
       ],
@@ -48,23 +50,29 @@ const AboutLayout = () => {
       title: 'Education',
       items: [
         {
-          title: 'Yonsei University, Seoul, South Korea | Graduated: August 2022',
+          title: (
+            <SplitedText target="Yonsei University, Seoul, South Korea | Graduated: August 2022" />
+          ),
           items: [
             {
               content: (
-                <>
-                  B.S. in{' '}
+                <span className={cx('linkWrapper')}>
+                  <SplitedText target="B.S. in " />{' '}
                   <Link
                     target="_blank"
                     href="https://che-en.yonsei.ac.kr/che_en/design/design_intro01.do"
                   >
                     Human Environment & Design
                   </Link>
-                </>
+                </span>
               ),
               items: [
-                { content: 'Double Major in Culture and Criticism Studies' },
-                { content: 'Focus areas: UX Design, Product Design, UX Research' },
+                { content: <SplitedText target="Double Major in Culture and Criticism Studies" /> },
+                {
+                  content: (
+                    <SplitedText target="Focus areas: UX Design, Product Design, UX Research" />
+                  ),
+                },
               ],
             },
           ],

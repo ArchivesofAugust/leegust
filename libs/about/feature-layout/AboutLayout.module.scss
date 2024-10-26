@@ -12,7 +12,7 @@
   @include glyph16Regular;
 
   margin-bottom: 16px;
-  color: $black-10;
+  color: $section-title-color;
 }
 
 .sectionItem {
@@ -25,5 +25,11 @@
   @include glyph15Regular;
 
   margin-bottom: 8px;
-  color: $black-14;
+  color: $item-title-color;
+}
+
+.linkWrapper {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
 }

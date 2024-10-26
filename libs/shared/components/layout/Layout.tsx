@@ -10,16 +10,23 @@ const cx = classNames.bind(styles)
 
 interface Props {
   title: string
+  hoverTitle?: string
   footer?: ReactElement
   backHref?: string
 }
 
-const Layout = ({ title, footer, backHref, children: contents }: PropsWithChildren<Props>) => {
+const Layout = ({
+  title,
+  hoverTitle,
+  footer,
+  backHref,
+  children: contents,
+}: PropsWithChildren<Props>) => {
   return (
     <div className={cx('container')}>
       <div className={cx('contents')}>
         <p className={cx('title')}>
-          <TextSlider value={title} href={backHref} />
+          <TextSlider value={title} hoverValue={hoverTitle} href={backHref} />
         </p>
         <div className={cx('children')}>{contents}</div>
       </div>

@@ -1,6 +1,17 @@
+// size
 $device-desktop: 992px;
 $device-tablet: 768px;
 $max-width: 550px;
-$link-color: $indigo-accessible-dark;
-$link-hover-color: $indigo-accessible-light;
-$link-active-color: $indigo-accessible-light;
+
+// background
+$background-color: $lightgray-7;
+
+// title
+$header-title-color: $black-6;
+$section-title-color: $black-10;
+$item-title-color: $black-12;
+
+// link
+$link-color: $gray6-accessible-light;
+$link-hover-color: $indigo-accessible-dark;
+$link-active-color: $indigo-accessible-dark;
