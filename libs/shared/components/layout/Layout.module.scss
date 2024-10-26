@@ -25,13 +25,13 @@
 }
 
 .title {
-  @include glyph16Medium;
+  @include glyph16Regular;
 
   margin-bottom: 8px;
   color: $header-title-color;
 
   @include desktop {
-    @include glyph16Medium;
+    @include glyph16Regular;
   }
 }
 

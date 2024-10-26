@@ -25,7 +25,7 @@ const Icon = ({ name, size, mobileSize, weight }: Props) => {
       case 'mail':
         return 'Mailbox'
       case 'about':
-        return 'Crown'
+        return 'Fingerprint'
       case 'back':
         return 'ArrowUUpLeft'
     }

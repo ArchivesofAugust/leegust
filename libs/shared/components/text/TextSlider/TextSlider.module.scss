@@ -32,7 +32,7 @@
 
 .item {
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform $duration ease;
 
   &.hover {
     position: absolute;

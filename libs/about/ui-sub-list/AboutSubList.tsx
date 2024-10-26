@@ -11,7 +11,7 @@ interface Props {
   depth?: number
 }
 
-const AboutSubList = ({ items, depth = 0 }: Props) => {
+const AboutSubList = ({ items, depth = 1 }: Props) => {
   return (
     <div className={cx('container')}>
       {items.map((item, index) => (

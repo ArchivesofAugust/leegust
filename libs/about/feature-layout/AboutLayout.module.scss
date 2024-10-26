@@ -11,6 +11,7 @@
 .sectionTitle {
   @include glyph16Regular;
 
+  width: fit-content;
   margin-bottom: 16px;
   color: $section-title-color;
 }
@@ -30,6 +31,22 @@
 
 .linkWrapper {
   display: inline-flex;
-  align-items: center;
-  width: 100%;
+  flex-direction: column;
+
+  & a {
+    display: inline-block;
+    width: fit-content;
+  }
+
+  &.shouldBeRowInMobile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }

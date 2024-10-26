@@ -1,13 +1,27 @@
 .container {
   user-select: none;
-  white-space: pre-line;
+  position: relative;
+  white-space: pre-wrap;
+
+  &.hasUnderline::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: currentcolor;
+  }
 }
 
 .line {
   display: inline;
 
   @include desktop {
-    display: block;
+    display: inline-block;
   }
 }
 

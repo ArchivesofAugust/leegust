@@ -19,7 +19,7 @@ const AboutLayout = () => {
         {
           title: (
             <div className={cx('linkWrapper')}>
-              <Link target="_blank" href="https://www.linkedin.com/company/latticeholdings/people/">
+              <Link target="_blank" href="https://www.lattice.im/">
                 Lattice
               </Link>{' '}
               <SplitedText target=" | November 2023 - Present" />
@@ -37,7 +37,12 @@ const AboutLayout = () => {
         },
         {
           title: (
-            <SplitedText target="Digital Media Lab, Yonsei University | Summer 2022 (3 months)" />
+            <span className={cx('linkWrapper')}>
+              <Link target="_blank" href="https://sites.google.com/view/yonseidmlab">
+                Digital Media Lab, Yonsei University
+              </Link>
+              <SplitedText target=" | Summer 2022 (3 months)" />
+            </span>
           ),
           items: [
             { content: <SplitedText target="Qualitative UX Research Intern" /> },
@@ -51,12 +56,15 @@ const AboutLayout = () => {
       items: [
         {
           title: (
-            <SplitedText target="Yonsei University, Seoul, South Korea | Graduated: August 2022" />
+            <span className={cx('linkWrapper')}>
+              <SplitedText target="Yonsei University, Seoul, South Korea " />
+              <SplitedText target="| Graduated: August 2022" />
+            </span>
           ),
           items: [
             {
               content: (
-                <span className={cx('linkWrapper')}>
+                <span className={cx('linkWrapper', 'shouldBeRowInMobile')}>
                   <SplitedText target="B.S. in " />{' '}
                   <Link
                     target="_blank"
@@ -69,9 +77,7 @@ const AboutLayout = () => {
               items: [
                 { content: <SplitedText target="Double Major in Culture and Criticism Studies" /> },
                 {
-                  content: (
-                    <SplitedText target="Focus areas: UX Design, Product Design, UX Research" />
-                  ),
+                  content: <SplitedText target="Focus areas: UX Design, Product Design" />,
                 },
               ],
             },
@@ -87,7 +93,7 @@ const AboutLayout = () => {
         {sections.map((section, index) => (
           <div key={index} className={cx('section')}>
             <h2 className={cx('sectionTitle')}>
-              <SplitedText target={section.title} />
+              <SplitedText target={section.title} hasUnderline />
             </h2>
             {section.items.map((item, itemIndex) => (
               <div key={itemIndex} className={cx('sectionItem')}>
