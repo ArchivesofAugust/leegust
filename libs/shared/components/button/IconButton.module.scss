@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    .icon.refresh {
+      transform: rotate(90deg);
+    }
+
+    .icon.goHome {
+      transform: rotate(-10deg);
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}

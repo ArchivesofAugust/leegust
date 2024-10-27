@@ -1,5 +1,7 @@
+import NotFoundLayout from '@/libs/notFound/ui-layout/NotFoundLayout'
+
 const notFound = () => {
-  return <div>not found page</div>
+  return <NotFoundLayout />
 }
 
 export default notFound

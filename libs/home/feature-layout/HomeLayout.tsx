@@ -34,6 +34,8 @@ const HomeLayout = () => {
     },
   ]
 
+  // TODO: 마인드 맵 만들기 (옵시디언처럼)
+
   return (
     <Layout title={title} hoverTitle="leegust">
       <div className={cx('container')}>

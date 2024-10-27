@@ -4,6 +4,48 @@ body {
   @include getMinFullScreenHeight;
 }
 
+button {
+  cursor: default;
+  user-select: none; // 텍스트 선택 방지
+
+  margin: 0;
+  padding: 0;
+  padding: 2px 4px;
+
+  color: $link-color;
+
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: 0;
+
+  transition: all $duration ease;
+
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+
+  &:hover {
+    cursor: default;
+    color: $link-hover-color;
+    background-color: $link-hover-background-color;
+  }
+
+  &:active {
+    color: $link-active-color;
+    background-color: $link-active-background-color;
+
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: none; // 키보드 포커스 아웃라인 제거
+  }
+}
+
 a {
   user-select: none; // 텍스트 선택 방지
 

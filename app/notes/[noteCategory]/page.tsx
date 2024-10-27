@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 import getNotes from '@/libs/notes/data-access-note/getNotes'
+import NotFoundLayout from '@/libs/notFound/ui-layout/NotFoundLayout'
 import { META_DESCRIPTION } from '@/libs/shared/constants/meta'
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ const page = ({ params }: Props) => {
   if (!notes.length) {
     notFound()
   }
-  return <div>list page</div>
+  return <NotFoundLayout />
 }
 
 export default page

@@ -57,6 +57,8 @@ const page = async ({ params }: Props) => {
   )
   console.log(hasPrevious, hasNext, previousUuid, nextUuid)
   console.log(categorizeTocItems(tocItems))
+
+  // TODO: 링크모음/캘린더/TOC 등 제작 (옵시디언 참고)
   return (
     <div className={cx('container')}>
       <div className={cx('wrapper')}>
