@@ -12,8 +12,7 @@ const cx = classNames.bind(styles)
 
 const HomeLayout = () => {
   const title = 'Archives of August'
-  const description =
-    "I'm a maker who codes and designs in Seoul, South Korea.\nHere, I write about things I see and hear, and the spaces in between."
+  const description = 'I write code, love design, and explore the spaces in between.'
 
   const socials: { icon: IconName; href: string }[] = [
     {

@@ -91,7 +91,7 @@ const AboutLayout = () => {
   ]
 
   return (
-    <Layout title="About" backHref="/">
+    <Layout title="About" hoverTitle="leegust" backHref="/">
       <div className={cx('container')}>
         {sections.map((section, index) => (
           <div key={index} className={cx('section')}>
