@@ -5,7 +5,7 @@ import { IconWeight } from '@phosphor-icons/react'
 import RawIcon from '@/libs/shared/components/Icon/RawIcon'
 import useWindowSize from '@/libs/shared/hooks/useWindowSize'
 
-export type IconName = 'github' | 'linkedin' | 'mail' | 'about' | 'back'
+export type IconName = 'github' | 'linkedin' | 'gmail' | 'about' | 'back' | 'education' | 'work'
 
 interface Props {
   name: IconName
@@ -22,12 +22,16 @@ const Icon = ({ name, size, mobileSize, weight }: Props) => {
         return 'LinkedinLogo'
       case 'github':
         return 'GithubLogo'
-      case 'mail':
-        return 'Mailbox'
+      case 'gmail':
+        return 'GoogleLogo'
       case 'about':
-        return 'Fingerprint'
+        return 'GitBranch'
       case 'back':
         return 'ArrowUUpLeft'
+      case 'education':
+        return 'GraduationCap'
+      case 'work':
+        return 'FileCode'
     }
   }
   return (

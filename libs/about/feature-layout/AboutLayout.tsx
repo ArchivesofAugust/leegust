@@ -4,6 +4,7 @@ import classNames from 'classnames/bind'
 
 import { AboutSection } from '@/libs/about/types'
 import AboutSubList from '@/libs/about/ui-sub-list/AboutSubList'
+import Icon from '@/libs/shared/components/Icon/Icon'
 import Layout from '@/libs/shared/components/layout/Layout'
 import SplitedText from '@/libs/shared/components/text/SplitedText/SplitedText'
 
@@ -14,6 +15,7 @@ const cx = classNames.bind(styles)
 const AboutLayout = () => {
   const sections: AboutSection[] = [
     {
+      icon: 'work',
       title: 'Work experience',
       items: [
         {
@@ -52,6 +54,7 @@ const AboutLayout = () => {
       ],
     },
     {
+      icon: 'education',
       title: 'Education',
       items: [
         {
@@ -92,9 +95,14 @@ const AboutLayout = () => {
       <div className={cx('container')}>
         {sections.map((section, index) => (
           <div key={index} className={cx('section')}>
-            <h2 className={cx('sectionTitle')}>
-              <SplitedText target={section.title} hasUnderline />
-            </h2>
+            <div className={cx('header')}>
+              <div className={cx('icon')}>
+                <Icon name={section.icon} size={16} weight="regular" />
+              </div>
+              <h2 className={cx('sectionTitle')}>
+                <SplitedText target={section.title} />
+              </h2>
+            </div>
             {section.items.map((item, itemIndex) => (
               <div key={itemIndex} className={cx('sectionItem')}>
                 <div className={cx('itemTitle')}>{item.title}</div>

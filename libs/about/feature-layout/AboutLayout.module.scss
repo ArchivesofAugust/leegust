@@ -8,11 +8,25 @@
   }
 }
 
+.header {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-bottom: 16px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .sectionTitle {
   @include glyph16Regular;
 
   width: fit-content;
-  margin-bottom: 16px;
   color: $section-title-color;
 }
 
