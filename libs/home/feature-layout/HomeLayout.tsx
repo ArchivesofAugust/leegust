@@ -12,7 +12,7 @@ const cx = classNames.bind(styles)
 
 const HomeLayout = () => {
   const title = 'Archives of August'
-  const description = 'I write code, love design, and explore the space in between.'
+  const description = 'I write code. I love design. Somewhere in between, keeping it simple.'
 
   const socials: { icon: IconName; href: string }[] = [
     {
