@@ -57,10 +57,12 @@ a {
   &:hover {
     cursor: default;
     color: $sub-color;
+    text-decoration: underline;
   }
 
   &:active {
     color: $sub-color;
+    text-decoration: underline;
 
     -webkit-tap-highlight-color: transparent;
   }
