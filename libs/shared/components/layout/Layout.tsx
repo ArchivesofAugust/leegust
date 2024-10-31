@@ -13,6 +13,7 @@ interface Props {
   hoverTitle?: string
   footer?: ReactElement
   backHref?: string
+  shouldFixTop?: boolean
 }
 
 const Layout = ({
@@ -20,10 +21,11 @@ const Layout = ({
   hoverTitle,
   footer,
   backHref,
+  shouldFixTop = true,
   children: contents,
 }: PropsWithChildren<Props>) => {
   return (
-    <div className={cx('container')}>
+    <div className={cx('container', { fixTop: shouldFixTop })}>
       <div className={cx('contents')}>
         <p className={cx('title')}>
           <TextSlider value={title} hoverValue={hoverTitle} href={backHref} />

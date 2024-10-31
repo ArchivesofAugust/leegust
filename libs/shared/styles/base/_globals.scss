@@ -8,11 +8,7 @@ button {
   cursor: default;
   user-select: none; // 텍스트 선택 방지
 
-  margin: 0;
-  padding: 0;
-  padding: 2px 4px;
-
-  color: $link-color;
+  color: $main-color;
 
   -webkit-appearance: none;
   appearance: none;
@@ -26,13 +22,11 @@ button {
 
   &:hover {
     cursor: default;
-    color: $link-hover-color;
-    background-color: $link-hover-background-color;
+    color: $sub-color;
   }
 
   &:active {
-    color: $link-active-color;
-    background-color: $link-active-background-color;
+    color: $sub-color;
 
     -webkit-tap-highlight-color: transparent;
   }
@@ -49,9 +43,7 @@ button {
 a {
   user-select: none; // 텍스트 선택 방지
 
-  padding: 2px 4px;
-
-  color: $link-color;
+  color: $main-color;
   text-decoration: none;
 
   border-radius: 6px;
@@ -64,13 +56,11 @@ a {
 
   &:hover {
     cursor: default;
-    color: $link-hover-color;
-    background-color: $link-hover-background-color;
+    color: $sub-color;
   }
 
   &:active {
-    color: $link-active-color;
-    background-color: $link-active-background-color;
+    color: $sub-color;
 
     -webkit-tap-highlight-color: transparent;
   }
@@ -86,7 +76,7 @@ a {
 
 .note-h1 {
   margin-bottom: 24px;
-  color: $black-11;
+  color: $main-color;
   text-align: left;
 
   @include glyph24Medium;
@@ -94,7 +84,7 @@ a {
 
 .note-h2 {
   margin-bottom: 20px;
-  color: $black-10;
+  color: $main-color;
   text-align: left;
 
   @include glyph20Medium;
@@ -102,7 +92,7 @@ a {
 
 .note-h3 {
   margin-bottom: 18px;
-  color: $black-10;
+  color: $main-color;
   text-align: left;
 
   @include glyph18Medium;
@@ -110,7 +100,7 @@ a {
 
 .note-p {
   margin-bottom: 16px;
-  color: $black-16;
+  color: $main-color;
   text-align: left;
 
   @include glyph15Regular;

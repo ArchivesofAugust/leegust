@@ -27,15 +27,16 @@
 
 .char {
   display: inline-block;
+  color: $main-color;
   transition: color 0.1s ease;
 
   &:not(.isSpace) {
     &:hover {
-      color: $darkgray;
+      color: $sub-color;
     }
 
     &:active {
-      color: $link-active-color;
+      color: $sub-color;
     }
   }
 }

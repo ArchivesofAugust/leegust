@@ -27,7 +27,7 @@
   @include glyph16Regular;
 
   width: fit-content;
-  color: $section-title-color;
+  color: $main-color;
 }
 
 .sectionItem {
@@ -40,7 +40,7 @@
   @include glyph15Regular;
 
   margin-bottom: 8px;
-  color: $item-title-color;
+  color: $main-color;
 }
 
 .linkWrapper {

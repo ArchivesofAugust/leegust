@@ -1,8 +1,6 @@
-import Link from 'next/link'
-
 import classNames from 'classnames/bind'
 
-import Icon, { IconName } from '@/libs/shared/components/Icon/Icon'
+import Categories from '@/libs/home/ui-categories/Categories'
 import Layout from '@/libs/shared/components/layout/Layout'
 import SplitedText from '@/libs/shared/components/text/SplitedText/SplitedText'
 
@@ -11,43 +9,45 @@ import styles from './HomeLayout.module.scss'
 const cx = classNames.bind(styles)
 
 const HomeLayout = () => {
-  const title = 'Archives of August'
-  const description = 'Write code. Love design. Somewhere in between, keeping it simple.'
+  const TITLE = 'Archives of August'
+  const DESCRIPTION = 'Write code. Love design. Somewhere in between, keeping it simple.'
 
-  const socials: { icon: IconName; href: string }[] = [
+  const items: { name: string; href: string }[] = [
     {
-      icon: 'github',
+      name: 'THINK,DO,WRITE',
+      href: '/',
+    },
+    {
+      name: 'SEE,HEAR',
+      href: '/',
+    },
+    {
+      name: 'ABOUT',
+      href: '/about',
+    },
+    {
+      name: 'GITHUB',
       href: 'https://github.com/ArchivesofAugust',
     },
     {
-      icon: 'linkedin',
+      name: 'LINKEDIN',
       href: 'https://www.linkedin.com/in/archivesofaugust',
     },
     {
-      icon: 'gmail',
+      name: 'GMAIL',
       href: 'mailto:archivesofaugust@gmail.com',
-    },
-    {
-      icon: 'about',
-      href: '/about',
     },
   ]
 
-  // TODO: 마인드 맵 만들기 (옵시디언처럼)
-
   return (
-    <Layout title={title} hoverTitle="leegust">
+    <Layout title={TITLE} hoverTitle="leegust">
       <div className={cx('container')}>
         <div className={cx('header')}>
           <p className={cx('row', 'description')}>
-            <SplitedText target={description} />
+            <SplitedText target={DESCRIPTION} />
           </p>
-          <div className={cx('row', 'links')}>
-            {socials.map((social) => (
-              <Link className={cx('link')} href={social.href} key={social.icon}>
-                <Icon name={social.icon} size={18} weight="bold" />
-              </Link>
-            ))}
+          <div className={cx('row', 'contents')}>
+            <Categories items={items} />
           </div>
         </div>
       </div>
