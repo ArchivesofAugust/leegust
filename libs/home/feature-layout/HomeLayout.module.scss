@@ -9,13 +9,17 @@
 .row {
   & + & {
     margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid $lightgray-4;
   }
 }
 
 .description {
   @include glyph16Regular;
 
-  color: $black-14;
+  color: $description-color;
+}
+
+.item {
+  & + & {
+    margin-top: 4px;
+  }
 }

@@ -4,5 +4,17 @@ $device-tablet: 768px;
 $max-width: 550px;
 $duration: 0.3s;
 $background-color: $white;
-$main-color: $black-16;
-$sub-color: $gray-3;
+
+// text color
+$title-color: $black-10;
+$heading-color: $black-12;
+$description-color: $black-14;
+$description-active-color: $gray-1;
+
+// link color
+$default-link-color: $blue-default-light;
+$active-link-color: $blue-default-light;
+
+// button color
+$default-button-color: $black;
+$active-button-color: $black;

@@ -2,42 +2,52 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 
   width: 100%;
 
   background-color: $background-color;
 
   @include getMinFullScreenHeight;
-
-  &.fixTop {
-    justify-content: flex-start;
-  }
 }
 
 .contents {
   width: 90%;
   max-width: 560px;
   margin: 0 auto;
+  padding: 60px 0 40px;
+
   text-align: left;
 
-  .fixTop & {
-    padding: 140px 0 40px;
-
-    @include desktop {
-      padding: 200px 0 80px;
-    }
+  @include desktop {
+    padding: 120px 0 80px;
   }
 }
 
 .title {
-  @include glyph16Regular;
+  @include glyph16Medium;
+
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
 
   margin-bottom: 8px;
-  color: $main-color;
 
-  @include desktop {
-    @include glyph16Regular;
+  color: $title-color;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $title-color;
+
+  &::after {
+    background-color: transparent;
+  }
+
+  &:hover {
+    color: $description-active-color;
   }
 }
 

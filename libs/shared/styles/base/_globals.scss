@@ -8,7 +8,7 @@ button {
   cursor: default;
   user-select: none; // 텍스트 선택 방지
 
-  color: $main-color;
+  color: $default-button-color;
 
   -webkit-appearance: none;
   appearance: none;
@@ -22,11 +22,11 @@ button {
 
   &:hover {
     cursor: default;
-    color: $sub-color;
+    color: $active-button-color;
   }
 
   &:active {
-    color: $sub-color;
+    color: $active-button-color;
 
     -webkit-tap-highlight-color: transparent;
   }
@@ -43,7 +43,9 @@ button {
 a {
   user-select: none; // 텍스트 선택 방지
 
-  color: $main-color;
+  position: relative;
+
+  color: $default-link-color;
   text-decoration: none;
 
   border-radius: 6px;
@@ -54,15 +56,32 @@ a {
   -webkit-tap-highlight-color: transparent; // 모바일에서 탭했을 때 하이라이트 제거
   -webkit-touch-callout: none; // iOS에서 길게 눌렀을 때 메뉴 제거
 
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background-color: $active-link-color;
+
+    transition: width $duration ease;
+  }
+
   &:hover {
     cursor: default;
-    color: $sub-color;
-    text-decoration: underline;
+    color: $active-link-color;
+
+    &::after {
+      width: 100%;
+    }
   }
 
   &:active {
-    color: $sub-color;
-    text-decoration: underline;
+    color: $active-link-color;
 
     -webkit-tap-highlight-color: transparent;
   }
@@ -78,7 +97,7 @@ a {
 
 .note-h1 {
   margin-bottom: 24px;
-  color: $main-color;
+  color: $heading-color;
   text-align: left;
 
   @include glyph24Medium;
@@ -86,7 +105,7 @@ a {
 
 .note-h2 {
   margin-bottom: 20px;
-  color: $main-color;
+  color: $heading-color;
   text-align: left;
 
   @include glyph20Medium;
@@ -94,7 +113,7 @@ a {
 
 .note-h3 {
   margin-bottom: 18px;
-  color: $main-color;
+  color: $heading-color;
   text-align: left;
 
   @include glyph18Medium;
@@ -102,7 +121,7 @@ a {
 
 .note-p {
   margin-bottom: 16px;
-  color: $main-color;
+  color: $description-color;
   text-align: left;
 
   @include glyph15Regular;

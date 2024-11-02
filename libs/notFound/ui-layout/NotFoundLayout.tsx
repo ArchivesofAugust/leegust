@@ -22,7 +22,7 @@ const NotFoundLayout = () => {
   const description = ITEMS[Math.floor(Math.random() * ITEMS.length)]
 
   return (
-    <Layout title="not found" hoverTitle="leegust">
+    <Layout title="not found">
       <div className={cx('container')}>
         <div className={cx('row', 'text')}>{description}</div>
         <div className={cx('row', 'buttons')}>

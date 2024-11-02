@@ -9,11 +9,12 @@ const cx = classNames.bind(styles)
 interface Props {
   target: string
   hasUnderline?: boolean
+  isTitle?: boolean
 }
 
-const SplitedText = ({ target, hasUnderline = false }: Props) => {
+const SplitedText = ({ target, hasUnderline = false, isTitle = false }: Props) => {
   return (
-    <span className={cx('container', { hasUnderline })}>
+    <span className={cx('container', { hasUnderline, isTitle })}>
       {target.split('\n').map((line, lineIndex, array) => (
         <Fragment key={lineIndex}>
           <span className={cx('line')}>
