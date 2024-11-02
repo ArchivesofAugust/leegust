@@ -10,8 +10,8 @@ import styles from './HomeLayout.module.scss'
 const cx = classNames.bind(styles)
 
 const HomeLayout = () => {
-  const TITLE = 'leegust | Archives of August'
-  const DESCRIPTION = 'write code. love design. somewhere in between, keeping it simple.'
+  const TITLE = 'leegust'
+  const DESCRIPTION = 'write code. love design. keeping it simple.'
 
   const items: { name: string; href: string }[] = [
     {

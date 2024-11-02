@@ -5,7 +5,7 @@ import Link from 'next/link'
 import classNames from 'classnames/bind'
 
 import Icon from '@/libs/shared/components/Icon/Icon'
-import SplitedText from '@/libs/shared/components/text/SplitedText/SplitedText'
+import TextSlider from '@/libs/shared/components/text/TextSlider/TextSlider'
 
 import styles from './Layout.module.scss'
 
@@ -27,7 +27,7 @@ const Layout = ({ title, footer, backHref, children: contents }: PropsWithChildr
               <Icon name="back" size={16} weight="duotone" />
             </Link>
           )}
-          <SplitedText target={title} />
+          <TextSlider value={title} hoverValue="Archives of August" />
         </p>
         <div className={cx('children')}>{contents}</div>
       </div>
