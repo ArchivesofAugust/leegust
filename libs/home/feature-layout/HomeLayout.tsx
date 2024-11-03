@@ -15,12 +15,8 @@ const HomeLayout = () => {
 
   const items: { name: string; href: string }[] = [
     {
-      name: 'notes',
+      name: 'notes, archives, studies',
       href: 'https://www.notion.so/Notes-Archives-of-August-13205b4b915e80408957e5e8b2a04768?pvs=4',
-    },
-    {
-      name: 'archives, studies',
-      href: 'https://www.notion.so/collection-Archives-of-August-13205b4b915e809b8386e1a6d0485c71?pvs=4',
     },
     {
       name: 'about',
