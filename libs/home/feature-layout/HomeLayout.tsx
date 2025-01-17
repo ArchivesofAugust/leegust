@@ -11,7 +11,7 @@ const cx = classNames.bind(styles)
 
 const HomeLayout = () => {
   const TITLE = 'leegust'
-  const DESCRIPTION = 'write code. love design. keeping it simple.'
+  const DESCRIPTION = 'Write code. Love design. Keep it simple.'
 
   const items: { name: string; href: string }[] = [
     {
