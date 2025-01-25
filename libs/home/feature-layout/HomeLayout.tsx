@@ -22,14 +22,6 @@ const HomeLayout = () => {
       name: 'github',
       href: 'https://github.com/ArchivesofAugust',
     },
-    {
-      name: 'linkedin',
-      href: 'https://www.linkedin.com/in/archivesofaugust',
-    },
-    {
-      name: 'gmail',
-      href: 'mailto:archivesofaugust@gmail.com',
-    },
   ]
 
   const shouldOpenNewTab = (href: string) => {
